@@ -12,6 +12,7 @@ import {
   Video,
   VideoControl,
   MediaPlayerState,
+  Sound,
 } from 'react-vr';
 
 const Linking = NativeModules.Linking;
@@ -32,13 +33,18 @@ export default class WelcomeToVR extends React.Component {
     this.Linking = NativeModules.Linking;
     return (
       <View
-        style={{
 
+        style={{
        }}
+
         >
+
 
         <Pano source={asset('louvre.jpg')} />
         <View style={{ }}>
+          <Sound source={{
+            mp3: asset('rose.mp3')
+           }} />
           <Text style={{
            backgroundColor: 'rgba(200, 54, 54, 0.5)',
              transform: [{translate: [0, 3, -5]}],
@@ -48,13 +54,14 @@ export default class WelcomeToVR extends React.Component {
             paddingLeft: 0.2,
             paddingRight: 0.2,
             textAlign: 'center',
-            textAlignVertical: 'center',
+            textAlignVertical: 'center'
              }}>
             The Louvre is the world's largest museum
             and a historic monument in Paris, </Text>
         </View>
         <View style={{  }}>
           <Text
+
             style={{
 
             backgroundColor: 'rgba(200, 54, 54, 0.5)',
@@ -69,7 +76,9 @@ export default class WelcomeToVR extends React.Component {
           }}>
             Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735
             square
-            metres (782,910 square feet) </Text>
+            metres (782,910 square feet)
+
+          </Text>
         </View>
 
         <View style={{  }}>
@@ -112,6 +121,7 @@ width: 3,
 
           style={{
          }}>
+
 
           <Text
 
